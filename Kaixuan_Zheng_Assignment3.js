@@ -36,27 +36,27 @@ const tableInfo = {
   ],
 };
 const app = document.getElementById("root");
-let tableDiv = document.createElement("div");
-tableDiv.className = "tableDiv margin-bottom-40px";
+const tableDiv = document.createElement("div");
+tableDiv.className = "tableDiv margin-bottom";
 app.appendChild(tableDiv);
 
-let table = document.createElement("table");
+const table = document.createElement("table");
 tableDiv.appendChild(table);
 
-let tHead = table.createTHead();
-let thr = tHead.insertRow(0);
-let thContent = tableInfo.tableHeader.map((head) => {
-  let th = document.createElement("th");
+const tHead = table.createTHead();
+const thr = tHead.insertRow(0);
+const thContent = tableInfo.tableHeader.map((head) => {
+  const th = document.createElement("th");
   th.textContent = head;
   return th;
 });
 thr.append(...thContent);
 
-let tBody = table.createTBody();
-let tbr = tableInfo.tableContent.map((obj) => {
-  let tr = document.createElement("tr");
-  let td = tableInfo.tableHeader.map((head) => {
-    let tdContent = document.createElement("td");
+const tBody = table.createTBody();
+const tbr = tableInfo.tableContent.map((obj) => {
+  const tr = document.createElement("tr");
+  const td = tableInfo.tableHeader.map((head) => {
+    const tdContent = document.createElement("td");
     tdContent.textContent = obj[head];
     return tdContent;
   });
@@ -74,22 +74,22 @@ tBody.append(...tbr);
 
 const list = ["HTML", "JavaScript", "CSS", "React", "Redux", "Java"];
 
-let listDiv = document.createElement("div");
-listDiv.className = "listDiv margin-bottom-40px";
+const listDiv = document.createElement("div");
+listDiv.className = "listDiv margin-bottom";
 app.appendChild(listDiv);
 
-let ol = document.createElement("ol");
-let oli = list.map((tech) => {
-  let li = document.createElement("li");
+const ol = document.createElement("ol");
+const oli = list.map((tech) => {
+  const li = document.createElement("li");
   li.textContent = tech;
   return li;
 });
 ol.append(...oli);
 listDiv.appendChild(ol);
 
-let ul = document.createElement("ul");
-let uli = list.map((tech) => {
-  let li = document.createElement("li");
+const ul = document.createElement("ul");
+const uli = list.map((tech) => {
+  const li = document.createElement("li");
   li.textContent = tech;
   return li;
 });
@@ -114,12 +114,12 @@ const dropDownList = [
 ];
 
 const dropDownDiv = document.createElement("div");
-dropDownDiv.className = "dropDownDiv margin-bottom-40px";
+dropDownDiv.className = "dropDownDiv margin-bottom";
 app.appendChild(dropDownDiv);
 
 const select = document.createElement("select");
 const options = dropDownList.map((obj) => {
-  let option = document.createElement("option");
+  const option = document.createElement("option");
   option.value = obj.value;
   option.textContent = obj.content;
   return option;
