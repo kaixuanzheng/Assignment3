@@ -5,6 +5,8 @@ body {
 .margin-bottom {
   margin-bottom: 5%;
 }
+
+/* Question 1 */
 .tableDiv table,
 .tableDiv tr,
 .tableDiv td,
@@ -15,6 +17,7 @@ body {
   padding: 5px 20px;
 }
 
+/* Question 2 */
 .listDiv {
   display: flex;
 }
@@ -31,6 +34,7 @@ body {
   background-color: rgb(188, 187, 187);
 }
 
+/* Question 3 */
 .dropDownDiv > select {
   border-radius: 15px;
   padding: 10px 20px;
@@ -44,6 +48,8 @@ body {
   display: flex;
   justify-content: center;
 }
+
+/* Responsive Layout */
 @media (max-width: 2000px) {
   .dropDownDiv > select {
     width: 356.97px;
