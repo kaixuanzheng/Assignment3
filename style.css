@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+  padding: 50px;
+}
+.margin-bottom-40px {
+  margin-bottom: 40px;
+}
+.tableDiv table,
+.tableDiv tr,
+.tableDiv td,
+.tableDiv th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 5px 20px;
+}
+
+.listDiv {
+  display: flex;
+}
+.listDiv > ul,
+.listDiv > ol {
+  border: 1px solid rgb(188, 187, 187);
+  border-radius: 15px;
+  margin-right: 80px;
+  box-shadow: 2px 2px 5px rgb(188, 187, 187);
+  padding: 15px 40px;
+}
+.listDiv > ul :hover,
+.listDiv > ol :hover {
+  background-color: rgb(188, 187, 187);
+}
+
+.dropDownDiv > select {
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: larger;
+}
