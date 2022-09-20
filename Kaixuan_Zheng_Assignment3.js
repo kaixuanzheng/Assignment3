@@ -37,6 +37,7 @@ const tableInfo = {
 };
 const app = document.getElementById("root");
 const tableDiv = document.createElement("div");
+
 tableDiv.className = "tableDiv margin-bottom";
 app.appendChild(tableDiv);
 
@@ -44,16 +45,16 @@ const table = document.createElement("table");
 tableDiv.appendChild(table);
 
 const tHead = table.createTHead();
-const thr = tHead.insertRow(0);
+const thRow = tHead.insertRow(0);
 const thContent = tableInfo.tableHeader.map((head) => {
   const th = document.createElement("th");
   th.textContent = head;
   return th;
 });
-thr.append(...thContent);
+thRow.append(...thContent);
 
 const tBody = table.createTBody();
-const tbr = tableInfo.tableContent.map((obj) => {
+const tBodyRow = tableInfo.tableContent.map((obj) => {
   const tr = document.createElement("tr");
   const td = tableInfo.tableHeader.map((head) => {
     const tdContent = document.createElement("td");
@@ -63,7 +64,7 @@ const tbr = tableInfo.tableContent.map((obj) => {
   tr.append(...td);
   return tr;
 });
-tBody.append(...tbr);
+tBody.append(...tBodyRow);
 
 /*
   
